@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Community | مجتمع مصممي ومطوري بيكسل الاحترافي</title>
+  <meta name="description" content="مجتمع بيكسل للمصممين والمطورين - منصة لمشاركة الأفكار والتصاميم والتواصل والتعلم التفاعلي.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Ambient Glow Background Gradients -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="main-header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-cubes-stacked"></i></span>
+        <span class="logo-text">PIXEL <span class="highlight">COMMUNITY</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-menu">
+        <a href="#feed" class="nav-link active" data-tab="feed"><i class="fa-solid fa-comments"></i> النقاشات</a>
+        <a href="#showcase" class="nav-link" data-tab="showcase"><i class="fa-solid fa-shapes"></i> معرض الأعمال</a>
+        <a href="#events" class="nav-link" data-tab="events"><i class="fa-solid fa-calendar-days"></i> الفعاليات</a>
+        <a href="#leaderboard" class="nav-link" data-tab="leaderboard"><i class="fa-solid fa-trophy"></i> المتصدرين</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline" id="search-toggle-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="btn btn-primary" id="open-post-modal-btn"><i class="fa-solid fa-plus"></i> منشور جديد</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-badge">
+        <i class="fa-solid fa-sparkles"></i> ملتقى المبدعين والمطورين
+      </div>
+      <h1 class="hero-title">أهلاً بك في مجتمع <span class="gradient-text">Pixel Community</span></h1>
+      <p class="hero-subtitle">بيئة تفاعلية لاكتشاف أحدث اتجاهات UI/UX، تبادل الخبرات، واستعراض تصاميمك المبتكرة مع مجتمع شغوف بالابتكار.</p>
+
+      <!-- Stats Bar -->
+      <div class="community-stats">
+        <div class="stat-card">
+          <span class="stat-number" id="stat-members">2,450+</span>
+          <span class="stat-label">مبدع ومطور</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="stat-discussions">1,120+</span>
+          <span class="stat-label">نقاش مثري</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="stat-designs">890+</span>
+          <span class="stat-label">تصميم معروض</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="main-content container">
+
+    <!-- Search & Filter Header -->
+    <div class="filter-bar-card glass-panel">
+      <div class="search-box">
+        <i class="fa-solid fa-search search-icon"></i>
+        <input type="text" id="global-search-input" placeholder="ابحث عن مواضيع، تصاميم، أو أعضاء...">
+      </div>
+      <div class="categories-filter" id="category-chips">
+        <button class="chip active" data-category="all">الكل</button>
+        <button class="chip" data-category="uiux">UI/UX Design</button>
+        <button class="chip" data-category="frontend">Frontend Dev</button>
+        <button class="chip" data-category="feedback">طلب نقد (Feedback)</button>
+        <button class="chip" data-category="tools">أدوات وتقنيات</button>
+      </div>
+    </div>
+
+    <!-- Section: Discussions Feed -->
+    <section class="content-tab active" id="tab-feed">
+      <div class="tab-layout">
+        <!-- Main Feed Column -->
+        <div class="feed-column" id="discussions-container">
+          <!-- Dynamically Populated Feed Posts -->
+        </div>
+
+        <!-- Sidebar Column -->
+        <aside class="sidebar-column">
+          <!-- Featured Challenge Card -->
+          <div class="glass-card widget-card highlight-border">
+            <div class="widget-header">
+              <i class="fa-solid fa-wand-magic-sparkles widget-icon"></i>
+              <h3>تحدي الأسبوع التصميمي</h3>
+            </div>
+            <p class="widget-text">تصميم واجهة مستخدم (Dashboard) لإدارة استهلاك الطاقة المتجددة بثيم داكن نيون.</p>
+            <div class="challenge-footer">
+              <span class="badge badge-purple"><i class="fa-solid fa-clock"></i> باقي 3 أيام</span>
+              <button class="btn btn-sm btn-secondary" id="join-challenge-btn">مشاركة التحدي</button>
+            </div>
+          </div>
+
+          <!-- Top Trending Topics -->
+          <div class="glass-card widget-card">
+            <div class="widget-header">
+              <i class="fa-solid fa-fire widget-icon text-orange"></i>
+              <h3>المواضيع الأكثر تفاعلاً</h3>
+            </div>
+            <ul class="trending-list">
+              <li><a href="#"><span class="tag">#BentoGrid</span> <span>ما هي أفضل الممارسات في تخطيط البينتو؟</span></a></li>
+              <li><a href="#"><span class="tag">#FramerVsFigma</span> <span>هل Framer سينهي دور مطور Frontend؟</span></a></li>
+              <li><a href="#"><span class="tag">#Glassmorphism</span> <span>تأثيرات الزجاج بين الأداء والجماليات</span></a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Section: Showcase Gallery -->
+    <section class="content-tab" id="tab-showcase">
+      <div class="section-title-wrapper">
+        <h2><i class="fa-solid fa-shapes"></i> معرض ابتكارات الأعضاء</h2>
+        <p>استكشف تصاميم ومشاريع متميزة من ابتكار أعضاء مجتمع Pixel</p>
+      </div>
+
+      <div class="showcase-grid" id="showcase-container">
+        <!-- Dynamically Populated Showcase Cards -->
+      </div>
+    </section>
+
+    <!-- Section: Events -->
+    <section class="content-tab" id="tab-events">
+      <div class="section-title-wrapper">
+        <h2><i class="fa-solid fa-calendar-days"></i> الفعاليات وورش العمل القادمة</h2>
+        <p>لقاءات مباشرة ومحاضرات تفاعلية مع نخبة من الخبراء والمصممين</p>
+      </div>
+
+      <div class="events-grid" id="events-container">
+        <!-- Dynamically Populated Event Cards -->
+      </div>
+    </section>
+
+    <!-- Section: Leaderboard -->
+    <section class="content-tab" id="tab-leaderboard">
+      <div class="section-title-wrapper">
+        <h2><i class="fa-solid fa-trophy"></i> لوحة متصدري المجتمع</h2>
+        <p>أبرز المساهمين والمبدعين تفاعلاً في مجتمع Pixel هذا الشهر</p>
+      </div>
+
+      <div class="glass-card leaderboard-card" id="leaderboard-container">
+        <!-- Dynamically Populated Leaderboard Table -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal: Create New Post -->
+  <div class="modal-overlay" id="post-modal">
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-pen-to-square"></i> إضافة منشور أو سؤال جديد</h3>
+        <button class="modal-close-btn" id="close-modal-btn">&times;</button>
+      </div>
+      <form id="create-post-form">
+        <div class="form-group">
+          <label for="post-title">عنوان المنشور</label>
+          <input type="text" id="post-title" required placeholder="مثال: كيف تحسن من استجابة الأنيميشن في CSS؟">
+        </div>
+        <div class="form-group">
+          <label for="post-category">التصنيف</label>
+          <select id="post-category" required>
+            <option value="uiux">UI/UX Design</option>
+            <option value="frontend">Frontend Dev</option>
+            <option value="feedback">طلب نقد (Feedback)</option>
+            <option value="tools">أدوات وتقنيات</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="post-content">محتوى المنشور</label>
+          <textarea id="post-content" rows="4" required placeholder="اكتب تفاصيل سؤالك أو موضوعك هنا..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="cancel-post-btn">إلغاء</button>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> نشر الموضوع</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="logo-text">PIXEL <span class="highlight">COMMUNITY</span></span>
+        <p>المنصة العربية الرائدة لمجتمع تصميم وتطوير الواجهات الرقمية.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/abdoemara175/Pixel-Community" target="_blank"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+        <span>&copy; 2026 Pixel Community. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
